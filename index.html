@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8">
+<title>NỀN TẢNG QUẢN LÝ HỌC TẬP EDUSOFT</title>
+<!-- <base href="https://edusoft.vn/" /> -->
+<meta name="description" content="NỀN TẢNG QUẢN LÝ HỌC TẬP - nền tảng giúp người dạy, người học và những người có quan tâm đến giáo dục có thể kết nối với nhau để chia sẻ kiến thức, kinh nghiệm và tìm kiếm thông tin về khoá học, giáo dục.">
+<meta name="keywords" content="NỀN TẢNG QUẢN LÝ HỌC TẬP EDUSOFT">
+<meta name="robots" content="FOLLOW">
+<meta name="google-site-verification" content="">
+<meta name="generator" content="EDUSOFT">
+<meta name="copyright" content="Viện Công nghệ Giáo dục EduSoft @ 2023">
+<meta name="author" content=" ">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://edusoft.vn/templates/web/home/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="https://edusoft.vn/templates/web/home/vendor/bootstrap-icons/bootstrap-icons.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" type="text/css">
+<!-- <link rel="stylesheet" href="https://edusoft.vn/templates/web/home2/css/styles.css" type="text/css"> -->
+<link rel="stylesheet" href="templates/web/home2/css/styles.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css">
+<link rel="shortcut icon" href="upload/config/icon.png"><!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-CLSEQMB68M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CLSEQMB68M');
+</script><script src="templates/web/home/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="templates/web/home/js/jquery.min.js"></script>
+<script src="templates/web/home/js/jquery.mmenu.js"></script>
+<script src="templates/web/home/js/main.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="layout header_wrapper">
+        <a href="/"><img width="155px" src="templates/web/home2/assets/images/logo/edusoft.svg" class="img-fluid"/></a>
+        <button type="button" title="Open" class="header_btn-open" onclick="handleMenu()"><svg stroke="currentColor"
+                fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="1em" width="1em"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25">
+                </path>
+            </svg></button>
+        <div class="header_menu">
+            <button type="button" title="Đóng" class="header_btn-close" onclick="handleMenu()"><svg
+                    stroke="currentColor" fill="currentColor" stroke-width="0" version="1.1" viewBox="0 0 17 17"
+                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <g></g>
+                    <path
+                        d="M9.207 8.5l6.646 6.646-0.707 0.707-6.646-6.646-6.646 6.646-0.707-0.707 6.646-6.646-6.647-6.646 0.707-0.707 6.647 6.646 6.646-6.646 0.707 0.707-6.646 6.646z">
+                    </path>
+                </svg></button>
+            <ul id="menu">
+                <li><a href="/" class="active">Trang chủ</a></li>
+                <li><a href="#product">Sản phẩm</a></li>
+                <li><a href="#about">Edusoft</a></li>
+                <li><a href="#feature">Tính năng</a></li>
+                <li><a href="#other">Khác</a></li>
+            </ul>
+            <div class="header_session">
+                <a data-bs-toggle="modal" data-bs-target="#loginForm" href="javascript:void(0)">Đăng nhập</a>
+                <a href="register.html" class="btn-primary btn_register">Đăng ký</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal-menu" onclick="handleMenu()"></div>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">sign_in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <center>
+            <a href="#" class="btn btn-block btn-danger">
+                <i class="fa fa-google-plus mr-2"></i>
+                Đăng nhập bằng Google+
+            </a>
+            </center>
+            <center class="my-2">-- OR --</center>
+            <form name="SigninForm" method="POST" id="SigninForm">
+                <div class="input-group mb-3">
+                    <input type="text" name="user_id" id="user_id" value="" required class="form-control" placeholder="username_or_email" aria-label="username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-person-circle"></i></span>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <input type="password" name="password" id="password" value="" required class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2"><i class="bi bi-shield-lock-fill"></i></span>
+                </div>
+                <a class="float-end" href="quen-mat-khau.html">lost_password</a>
+                <div class="form-check mb-3">
+                    <input class="" style="margin-left:-1.5em" type="checkbox" name="save_password" id="save_password" value="1" />
+                    <label class="form-check-label" for="save_password">
+                        auto_login
+                    </label>
+                    
+                    <input onchange="showpass(this.checked)" class="" style="margin-left:1.5em" type="checkbox" name="view_password" id="view_password" />
+                    <label class="form-check-label" for="view_password">
+                        view_password
+                    </label>
+                </div>
+                <button type="submit" id="submitbtn" class="btn btn-primary">sign_in</button>
+                <hr>
+                <div>
+                    do_you_have_account <a href="register.html" class="text-primary">signup_now</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- Modal -->
+
+<main>
+    <section id="home" class="home">
+        <div class="home_wrapper">
+            <div class="home_content">
+                <h1>NỀN TẢNG QUẢN LÝ HỌC TẬP EDUSOFT</h1>
+                <p>Hệ thống Quản lý học tập Toàn diện và Tiên phong cho người dạy</p>
+                <div class="home_btn">
+                    <a type="button" href="register.html" title="" class="btn btn-primary">
+                        Đăng ký ngay
+                    </a>
+                    <button type="button" title="" class="btn btn-primary-text d-none">
+                        Tìm hiểu thêm
+                    </button>
+                </div>
+            </div>
+            <div class="home_banner-visual">
+                <img src="templates/web/home2/assets/images/element/banner-visual.jpg" alt="" class="home-img"/>
+                <div class="home-icon">
+                    <img src="templates/web/home2/assets/images/element/icon-1.png" alt=""/>
+                </div>
+                <div class="home-icon">
+                    <img src="templates/web/home2/assets/images/element/icon-2.png" alt=""/>
+                </div>
+                <div class="home-icon">
+                    <img src="templates/web/home2/assets/images/element/icon-3.png" alt=""/>
+                </div>
+                <div class="home-icon">
+                    <img src="templates/web/home2/assets/images/element/icon-4.png" alt=""/>
+                </div>
+                <div class="circle"></div>
+            </div>
+        </div>
+    </section>
+    <section id="product" class="section">
+        <div class="layout">
+            <h2 class="title">Nền tảng Quản lý Học tập 4.0</h2>
+            <p class="sub-title">Kết nối và Đáp ứng nhu cầu toàn diện của người dạy và người học</p>
+            <div class="product_list">
+                <div class="product_item">
+                    <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/6.svg" alt="" />
+                    <div class="product_item-content">
+                        <h3>PHÂN HỆ DỮ LIỆU</h3>
+                        <p>Bộ tính năng lưu trữ, tổ chức, hệ thống tài liệu giảng dạy và ngân hàng  câu hỏi</p>
+                    </div>
+                    <a href="#edata">Xem thêm</a>
+                </div>
+                <div class="product_item">
+                    <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/6.svg" alt="" />
+                    <div class="product_item-content">
+                        <h3>PHÂN HỆ DẠY HỌC</h3>
+                        <p>Bộ tính năng quản lý toàn diện hoạt động giảng dạy trong lớp học</p>
+                    </div>
+                    <a href="#elearning">Xem thêm</a>
+                </div>
+                <div class="product_item">
+                    <img src="templates/web/home2/assets/images/ICON WEB_P1/REPORT/3.svg" alt="" />
+                    <div class="product_item-content">
+                        <h3>PHÂN HỆ ĐÁNH GIÁ</h3>
+                        <p>Bộ tính năng quản lý đầy đủ giai đoạn trước, trong và sau hoạt động kiểm tra</p>
+                    </div>
+                    <a href="#assessment">Xem thêm</a>
+                </div>
+                <div class="product_item">
+                    <img src="templates/web/home2/assets/images/ICON WEB_P1/INFOR/4.svg" alt="" />
+                    <div class="product_item-content">
+                        <h3>PHÂN HỆ TƯƠNG TÁC</h3>
+                        <p>Bộ tính năng kết nối, tương tác và chia sẻ thông tin giữa người dùng</p>
+                    </div>
+                    <a href="#interactive">Xem thêm</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="layout about_wrapper">
+            <div class="about_banner"><img src="templates/web/home2/assets/images/about-banner.png" alt="" /></div>
+            <div class="about-content">
+                <h2 class="title">Nền tảng Quản lý học tập EduSoft</h2>
+                <p>Viện phát triển Công nghệ Giáo dục EduSoft được biết đến là đơn vị tiên phong cung cấp giải pháp
+                    Chuyển đổi số trong Giáo dục. Nền tảng Quản lý học tập EduSoft là một trong những phân hệ chính
+                    của Viện, được tích hợp bộ tính năng đầy đủ phục vụ nhu cầu cho người dạy và người học trên một
+                    nền tảng duy nhất.</p>
+                <p>Với 10+ tính năng được xây dựng và cải tiến liên tục, Nền tảng Quản lý học tập EduSoft hướng tới
+                    việc đáp ứng nhu cầu cho mọi đối tượng giảng dạy, mọi môn học và mọi mô hình giảng dạy.</p>
+                <a href="#">
+                    <span class="btn-primary-text about_btn">Tìm hiểu thêm</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="feature" class="section">
+        <div class="layout">
+            <h2 class="title">Bộ tính năng ưu việt</h2>
+            <p class="sub-title">Đáp ứng toàn diện mọi nhu cầu giảng dạy</p>
+            <div class="feature_list">
+                <div class="feature_item" id="edata">
+                    <div class="feature_item_wrapper">
+                        <span class="feature_icon me-2">
+                            <img src="templates/web/home2/assets/images/ICON WEB_P1/INFOR/1.svg" alt="" />
+                        </span>
+                        <h3 class="feature_title d-inline">PHÂN HỆ DỮ LIỆU</h3>
+                    </div>                    
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/INFOR/1.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Quản lý thông tin cá nhân</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/INFOR/2.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Ngân hàng tài liệu</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/INFOR/3.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Ngân hàng câu hỏi</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <a href="#" target="_blank" class="feature_more d-none">Tìm hiểu thêm <svg stroke="currentColor"
+                            fill="currentColor" stroke-width="0" viewBox="0 0 32 32" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M 21.1875 9.28125 L 19.78125 10.71875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 19.78125 21.28125 L 21.1875 22.71875 L 27.90625 16 Z">
+                            </path>
+                        </svg></a> -->
+                </div>
+                <div class="feature_item">
+                    <div class="feature_item_wrapper" id="elearning">
+                        <span class="feature_icon me-2">
+                            <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/1.svg" alt="" />
+                        </span>
+                        <h3 class="feature_title d-inline">PHÂN HỆ DẠY HỌC</h3>
+                    </div>                    
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/1.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Quản lý Lớp học</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/2.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Lịch trình giảng dạy</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/3.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Quản lý buổi học : học trực tuyến, tài liệu buổi học, kiểm tra, giao bài tập, điểm danh</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/4.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Tạo đề kiểm tra/thi tự động</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/RESOURCES/5.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Thảo luận trong lớp học</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <a href="#" target="_blank" class="feature_more d-none">Tìm hiểu thêm <svg stroke="currentColor"
+                        fill="currentColor" stroke-width="0" viewBox="0 0 32 32" height="1em" width="1em"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M 21.1875 9.28125 L 19.78125 10.71875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 19.78125 21.28125 L 21.1875 22.71875 L 27.90625 16 Z">
+                        </path>
+                    </svg></a> -->
+                </div>
+                <div class="feature_item" id="assessment">
+                    <div class="feature_item_wrapper">
+                        <span class="feature_icon me-2">
+                            <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/1.svg" alt="" />
+                        </span>
+                        <h3 class="feature_title d-inline">PHÂN HỆ ĐÁNH GIÁ</h3>
+                    </div>
+                    <ul>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/1.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Tổ chức các cuộc thi</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/2.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Hệ thống chấm lập trình tự động</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/3.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Hệ thống chấm trắc nghiệm</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/4.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Hệ thống chấm tự luận</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/PROCESS/3.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Bảng điểm</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <a href="#" target="_blank" class="feature_more d-none">Tìm hiểu thêm <svg stroke="currentColor"
+                            fill="currentColor" stroke-width="0" viewBox="0 0 32 32" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M 21.1875 9.28125 L 19.78125 10.71875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 19.78125 21.28125 L 21.1875 22.71875 L 27.90625 16 Z">
+                            </path>
+                        </svg></a> -->
+                </div>
+                <div class="feature_item" id="interactive">
+                    <div class="feature_item_wrapper">
+                        <span class="feature_icon me-2"> <img src="templates/web/home2/assets/images/ICON WEB_P1/REPORT/1.svg" alt="" /></span>
+                        <h3 class="feature_title d-inline">PHÂN HỆ TƯƠNG TÁC</h3>
+                    </div>                    
+                    <ul>
+                        <li>
+                            <span><img src="templates/web/home2/assets/images/ICON WEB_P1/REPORT/1.svg" alt="" /></span>
+                            <div>
+                                <p>Chia sẻ tài liệu</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span><img src="templates/web/home2/assets/images/ICON WEB_P1/REPORT/2.svg" alt="" /></span>
+                            <div>
+                                <p>Chia sẻ lớp học</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span>
+                                <img src="templates/web/home2/assets/images/ICON WEB_P1/REPORT/1.svg" alt="" />
+                            </span>
+                            <div>
+                                <p>Báo cáo</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- <a href="#" target="_blank" class="feature_more d-none">Tìm hiểu thêm <svg stroke="currentColor"
+                            fill="currentColor" stroke-width="0" viewBox="0 0 32 32" height="1em" width="1em"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M 21.1875 9.28125 L 19.78125 10.71875 L 24.0625 15 L 4 15 L 4 17 L 24.0625 17 L 19.78125 21.28125 L 21.1875 22.71875 L 27.90625 16 Z">
+                            </path>
+                        </svg></a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact-none" class="contact section d-none">
+        <div class="layout contact_wrapper">
+            <img src="templates/web/home2/assets/images/edusoft-nen-tang-giao-duc-toan-dien-danh-cho-doi-tac.png" alt=""
+                loading="lazy" />
+            <div class="contact-content">
+                <h2 class="title">Tính ưu việt của E - Digital</h2>
+                <p class="sub-title">Với đội ngũ nhiều kinh nghiệm trong lĩnh vực Giáo dục và Đào tạo, chúng tôi
+                    thấu hiểu và bám sát vấn đề mà các Cơ sở Giáo dục đang gặp phải. E - Digital được xây dựng và
+                    thiết kế trên cơ sở đáp ứng trọn vẹn nhu cầu, và riêng biệt cho các đơn vị Giáo dục.</p>
+                <ul>
+                    <li>
+                        <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1"
+                                viewBox="0 0 48 48" enable-background="new 0 0 48 48" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle fill="#4CAF50" cx="24" cy="24" r="21"></circle>
+                                <polygon fill="#CCFF90"
+                                    points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"></polygon>
+                            </svg></span>
+                        <p>Sản phẩm may đo cho Giáo dục: Đáp ứng nhu cầu đặc thù của các đơn vị Giáo dục.</p>
+                    </li>
+                    <li>
+                        <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1"
+                                viewBox="0 0 48 48" enable-background="new 0 0 48 48" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle fill="#4CAF50" cx="24" cy="24" r="21"></circle>
+                                <polygon fill="#CCFF90"
+                                    points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"></polygon>
+                            </svg></span>
+                        <p>Khả năng tùy biến và tự động: Các cấu phần trong E - Digital được tổ chức khoa học, giúp
+                            tùy chỉnh linh hoạt theo nhu cầu và mô hình đào tạo của đơn vị.</p>
+                    </li>
+                    <li>
+                        <span><svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1"
+                                viewBox="0 0 48 48" enable-background="new 0 0 48 48" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle fill="#4CAF50" cx="24" cy="24" r="21"></circle>
+                                <polygon fill="#CCFF90"
+                                    points="34.6,14.6 21,28.2 15.4,22.6 12.6,25.4 21,33.8 37.4,17.4"></polygon>
+                            </svg></span>
+                        <p>Khả năng mở rộng không hạn chế: Hệ thống dữ liệu liên kết chặt chẽ giữa các module giúp
+                            trải nghiệm mượt và khả năng mở rộng tính năng để phục vụ nhu cầu không hạn chế.</p>
+                    </li>
+                </ul>
+                <a href="https://digital.edusoft.vn"><span class="btn btn-primary">Liên hệ ngay với chúng tôi</span></a>
+            </div>
+        </div>
+    </section>
+    <img class="img-other" id="other" src="templates/web/home2/assets/images/nentang.jpg" title="Nền tảng Công nghệ giáo dục 4.0"/>
+    <!-- <section id="questions" class="section d-none">
+        <div class="layout">
+            <h2 class="title"><span class="faq">FAQ</span> - Câu hỏi thường gặp</h2>
+            <div id="collapse" class="collapse">
+                <div class="collapse_item">
+                    <div class="collapse_title">
+                        <h4>E-Digital có những tính năng gì?</h4>
+                        <span class="collapse_icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 1024 1024" class="ant-collapse-arrow" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M872 474H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h720c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8z">
+                                </path>
+                            </svg></span>
+                    </div>
+                    <p class="collapse_description collapsed">Ngoài 5 phân hệ chính và các phân hệ phụ trợ, E -
+                        Digital liên tục mở rộng để đáp ứng nhu cầu đặc thù của các đơn vị giáo dục.</p>
+                </div>
+                <div class="collapse_item">
+                    <div class="collapse_title">
+                        <h4>Hệ thống này có khả năng tạo ra các báo cáo và thống kê về tiến trình học tập không?
+                        </h4>
+                        <span class="collapse_icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                t="1551322312294" viewBox="0 0 1024 1024" version="1.1" class="ant-collapse-arrow"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <defs></defs>
+                                <path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z">
+                                </path>
+                                <path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z">
+                                </path>
+                            </svg></span>
+                    </div>
+                    <p class="collapse_description not-collapsed">Đúng vậy, hệ thống này cho phép tạo ra các báo cáo
+                        và thống kê liên quan đến tiến trình học tập, giúp đánh giá hiệu suất học tập và cải thiện
+                        quy trình giảng dạy.</p>
+                </div>
+                <div class="collapse_item">
+                    <div class="collapse_title">
+                        <h4> Làm thế nào hệ thống đảm bảo rằng thông tin cá nhân của học viên và dữ liệu học tập
+                            được bảo vệ?</h4>
+                        <span class="collapse_icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                t="1551322312294" viewBox="0 0 1024 1024" version="1.1" class="ant-collapse-arrow"
+                                height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                <defs></defs>
+                                <path d="M474 152m8 0l60 0q8 0 8 8l0 704q0 8-8 8l-60 0q-8 0-8-8l0-704q0-8 8-8Z">
+                                </path>
+                                <path d="M168 474m8 0l672 0q8 0 8 8l0 60q0 8-8 8l-672 0q-8 0-8-8l0-60q0-8 8-8Z">
+                                </path>
+                            </svg></span>
+                    </div>
+                    <p class="collapse_description not-collapsed">Hệ thống của chúng tôi có các biện pháp bảo mật
+                        nâng cao, bao gồm mã hóa dữ liệu và hệ thống phân quyền cẩn thận. Chúng tôi cũng tuân thủ
+                        các tiêu chuẩn bảo mật và luôn cập nhật để đối phó với các rủi ro mới.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="section other">
+        <div class="layout">
+            <div class="other_title">
+                <div class="line">
+                </div>
+                <h2>Các Sản phẩm Chuyển đổi số 4.0 của EduSoft</h2>
+                <div class="line">
+                </div>
+            </div>
+            <div class="swiper mySwiper other_list">
+                <div class="swiper-wrapper">
+                    <a href="https://digital.edusoft.vn/" rel="noopener" target="_blank"
+                        class="product_item other_item swiper-slide">
+                        <img src="templates/web/home2/assets/images/HMS.svg" alt="" />
+                        <div class="product_item-content">
+                            <h3>E-HMS</h3>
+                            <p>Quản lý Nhân sự</p>
+                        </div>
+                    </a>
+                    <a href="https://digital.edusoft.vn/" rel="noopener" target="_blank"
+                        class="product_item other_item swiper-slide">
+                        <img src="templates/web/home2/assets/images/WMS.svg" alt="" />
+                        <div class="product_item-content">
+                            <h3>E-WMS</h3>
+                            <p>Quản lý Công việc</p>
+                        </div>
+                    </a>
+                    <a href="https://digital.edusoft.vn/" rel="noopener" target="_blank"
+                        class="product_item other_item swiper-slide">
+                        <img src="templates/web/home2/assets/images/TMS.svg" alt="" />
+                        <div class="product_item-content">
+                            <h3>E-TMS</h3>
+                            <p>Quản lý Đào tạo</p>
+                        </div>
+                    </a>
+                    <a href="https://digital.edusoft.vn/" rel="noopener" target="_blank"
+                        class="product_item other_item swiper-slide">
+                        <img src="templates/web/home2/assets/images/EXAM.svg" alt="" />
+                        <div class="product_item-content">
+                            <h3>E-EXAM</h3>
+                            <p>Khảo thí trong Giáo dục</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contact" class="footer">
+    <div class="layout">
+        <div class="d-none">
+            <h3>Đăng ký Demo trực tiếp với Edusoft</h3>
+            <form action="#" autocomplete="off" class="footer_form">
+                <div class="footer_form_wrapper">
+                    <input name="phonenumber" type="text" id="phonenumber" title="Đăng ký demo trực tiếp với Edusoft"
+                        placeholder="Nhập số điện thoại liên hệ" />
+                    <button title="" type="submit">Gửi thông tin
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.3852 9.69873L22.9792 18.0885L34.5733 9.69873H11.3852Z" fill="white" />
+                            <path
+                                d="M23.611 20.2918C23.4225 20.4282 23.2009 20.4964 22.9793 20.4964C22.7577 20.4964 22.536 20.4282 22.3476 20.2918L9.95857 11.3267V12.4381H4.9794C4.38428 12.4381 3.90179 12.9206 3.90179 13.5157C3.90179 14.1108 4.38428 14.5933 4.9794 14.5933H9.95857V21.4066H4.9794C4.38428 21.4066 3.90179 21.8891 3.90179 22.4842C3.90179 23.0793 4.38428 23.5618 4.9794 23.5618H9.95857V25.2236C9.95857 25.8187 10.4411 26.3012 11.0362 26.3012H34.9224C35.5175 26.3012 36 25.8187 36 25.2236V11.3267L23.611 20.2918Z"
+                                fill="white" />
+                            <path
+                                d="M7.13439 16.9224H1.07761C0.482483 16.9224 0 17.4048 0 18C0 18.5951 0.482483 19.0776 1.07761 19.0776H7.13439C7.72951 19.0776 8.21199 18.5951 8.21199 18C8.21199 17.4048 7.72951 16.9224 7.13439 16.9224Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="row pt-5">
+            <div class="col-md-6 col-xs-12 mb-4">
+                <h4>VIỆN PHÁT TRIỂN CÔNG NGHỆ VÀ GIÁO DỤC EDUSOFT</h4>
+                <p><i class="fa fa-phone me-1" aria-hidden="true"></i><span>Điện thoại: </span>0916.567.528</p>
+                <p><a href="mailto:info@edusoft.vn">
+                    <i class="fa fa-envelope-o me-1" aria-hidden="true"></i><span> </span>info@edusoft.vn</p>
+                </a></p>
+                <p><i class="fa fa-address-card me-1" aria-hidden="true"></i><span>Địa chỉ: </span>Số 5 Ngõ 199 Trần Quốc Hoàn - Cầu Giấy - Hà Nội</p>
+            </div>
+            <div class="col-md-3 col-xs-12 mb-4">
+                <h4>VỀ CHÚNG TÔI</h4>
+                <p><a href="terms_of_service.html">Điều khoản dịch vụ</a></p>
+                <p><a href="privacy_policy.html">Chính sách bảo mật</a></p>
+                <div class="footer_socials">
+                    <a href="https://www.facebook.com/edusoft.vn" target="_blank" rel="noopener" title="Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519943 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C24 8.8174 22.7357 5.76516 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0ZM15.0411 10.8632L14.8421 12.5353C14.8335 12.6129 14.7965 12.6845 14.7382 12.7364C14.6799 12.7883 14.6044 12.8168 14.5263 12.8163H12.7895V17.7742C12.7899 17.8334 12.7669 17.8904 12.7255 17.9327C12.6841 17.975 12.6276 17.9992 12.5684 18H10.8C10.7706 17.9996 10.7415 17.9934 10.7144 17.9817C10.6874 17.9701 10.6629 17.9532 10.6424 17.9321C10.6219 17.911 10.6057 17.886 10.5948 17.8587C10.5839 17.8313 10.5785 17.8021 10.579 17.7726L10.5884 12.8163H9.27316C9.18941 12.8163 9.10909 12.783 9.04987 12.7238C8.99065 12.6646 8.95737 12.5843 8.95737 12.5005V10.83C8.95737 10.7462 8.99065 10.6659 9.04987 10.6067C9.10909 10.5475 9.18941 10.5142 9.27316 10.5142H10.579V8.89421C10.579 7.02 11.6953 6 13.3263 6H14.6637C14.7474 6 14.8278 6.03327 14.887 6.09249C14.9462 6.15171 14.9795 6.23204 14.9795 6.31579V7.72263C14.9795 7.80638 14.9462 7.88671 14.887 7.94593C14.8278 8.00515 14.7474 8.03842 14.6637 8.03842H13.8442C12.9568 8.05263 12.7895 8.47737 12.7895 9.11211V10.5095H14.7347C14.7788 10.5105 14.8222 10.5207 14.862 10.5395C14.9019 10.5582 14.9374 10.5851 14.9663 10.6184C14.9951 10.6518 15.0167 10.6907 15.0296 10.7329C15.0424 10.775 15.0464 10.8194 15.0411 10.8632Z"
+                                fill="white"></path>
+                        </svg>
+                    </a>
+                    <a href="#" title="Youtube" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"  fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_109_217)">
+                            <path d="M10.5053 14.2483L14.4088 12.0001L10.5053 9.75195V14.2483Z"
+                                fill="white"></path>
+                            <path
+                                d="M12 0C5.3736 0 0 5.3736 0 12C0 18.6264 5.3736 24 12 24C18.6264 24 24 18.6264 24 12C24 5.3736 18.6264 0 12 0ZM19.4982 12.0123C19.4982 12.0123 19.4982 14.4459 19.1895 15.6194C19.0164 16.2618 18.5099 16.7682 17.8676 16.9411C16.6941 17.25 12 17.25 12 17.25C12 17.25 7.31818 17.25 6.13239 16.9288C5.49005 16.756 4.98358 16.2493 4.81055 15.607C4.50165 14.4459 4.50165 12 4.50165 12C4.50165 12 4.50165 9.56653 4.81055 8.39301C4.9834 7.75067 5.50232 7.23175 6.13239 7.0589C7.30591 6.75 12 6.75 12 6.75C12 6.75 16.6941 6.75 17.8676 7.07117C18.5099 7.24402 19.0164 7.75067 19.1895 8.39301C19.5106 9.56653 19.4982 12.0123 19.4982 12.0123Z"
+                                fill="white"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_109_217">
+                                <rect width="24" height="24" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                        </svg>
+                    </a>
+                    <a href="#" title="Zalo" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 0C5.3625 0 0 5.3625 0 12C0 18.6375 5.3625 24 12 24C18.6375 24 24 18.6375 24 12C24 5.3625 18.6375 0 12 0ZM19.875 20.2875C16.125 21.3 11.7375 21 8.5875 19.2375C7.6125 19.725 6.225 20.025 5.1375 19.9125C4.95 19.9125 4.9125 19.8375 5.025 19.6875C5.8125 18.9 6.3 17.5875 5.775 16.8375C5.775 16.8375 5.775 16.8375 5.775 16.8C3.075 13.2 2.8875 7.3125 4.9125 3.1125C5.0625 2.85 5.25 2.625 5.5125 2.4375C7.3875 1.1625 9.525 0.300001 11.925 0.300001C18.45 0.300001 23.7375 5.5875 23.7375 12.1125C23.7375 15.0375 22.5375 17.6625 20.7375 19.725C20.475 20.025 20.175 20.175 19.875 20.2875Z"
+                                fill="white"></path>
+                            <path
+                                d="M10.725 9.9C10.7625 9.8625 10.8375 9.7875 10.875 9.75V9.7125C11.025 9.4875 11.0625 9.3375 11.0625 9.1125V9H7.2375V9.825H9.9L7.275 13.05C7.2 13.1625 7.125 13.275 7.125 13.5375V13.7625H10.725C10.9125 13.7625 11.0625 13.6125 11.0625 13.425V12.975H8.2875L10.725 9.9Z"
+                                fill="white"></path>
+                            <path
+                                d="M15.6375 13.4625C15.6375 13.6125 15.75 13.725 15.9 13.725H16.425V9H15.6V13.4625H15.6375Z"
+                                fill="white"></path>
+                            <path
+                                d="M20.7 11.6624C20.5875 10.8374 19.9125 10.1624 19.0875 10.0499C17.85 9.89993 16.8375 10.9124 16.9875 12.1499C17.1 12.9749 17.775 13.6499 18.6 13.7624C19.8375 13.9124 20.85 12.8999 20.7 11.6624ZM19.95 12.0374C19.9125 12.5624 19.5 12.9749 18.975 13.0124C18.2625 13.0874 17.7 12.4874 17.775 11.8124C17.8125 11.2874 18.225 10.8749 18.75 10.8374C19.425 10.7624 20.025 11.3249 19.95 12.0374Z"
+                                fill="white"></path>
+                            <path
+                                d="M14.2125 10.4248C13.9125 10.1998 13.5375 10.0498 13.125 10.0498C12.075 10.0498 11.2125 10.9123 11.25 11.9623C11.2875 12.9373 12.075 13.7248 13.05 13.7623C13.5 13.7623 13.9125 13.6498 14.2125 13.3873C14.2125 13.5748 14.3625 13.7248 14.55 13.7248H15V10.1248H14.25V10.4248H14.2125ZM13.0875 13.0123C12.4125 13.0123 11.8875 12.4123 12 11.6998C12.075 11.2873 12.4125 10.9498 12.8625 10.8373C13.575 10.6873 14.175 11.2498 14.175 11.9248C14.175 12.5248 13.725 13.0123 13.0875 13.0123Z"
+                                fill="white"></path>
+                        </svg></a>
+                    <a href="#" title="Tiktok" target="_blank"><svg width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 0C9.62663 0 7.30655 0.703788 5.33316 2.02236C3.35977 3.34094 1.8217 5.21509 0.913451 7.4078C0.00519938 9.60051 -0.232441 12.0133 0.230582 14.3411C0.693605 16.6689 1.83649 18.8071 3.51472 20.4853C5.19295 22.1635 7.33115 23.3064 9.65892 23.7694C11.9867 24.2324 14.3995 23.9948 16.5922 23.0866C18.7849 22.1783 20.6591 20.6402 21.9776 18.6668C23.2962 16.6935 24 14.3734 24 12C24 8.8174 22.7357 5.76516 20.4853 3.51472C18.2348 1.26428 15.1826 0 12 0ZM17.4095 10.6626C16.339 10.7811 15.4216 10.3579 14.5042 9.81789C14.5042 9.90632 14.5311 12.6474 14.4853 13.9547C14.4395 15.2984 13.9595 16.4811 12.9063 17.3637C10.6737 19.2379 7.50474 18.2258 6.74843 15.36C6.3379 13.7984 6.69474 12.3916 7.92001 11.2784C8.61001 10.6468 9.46106 10.3658 10.3737 10.2489C10.5695 10.2237 10.7668 10.2126 10.9784 10.1937V12.3158C10.71 12.3821 10.4384 12.4405 10.1716 12.5195C9.98647 12.5729 9.8059 12.641 9.63159 12.7232C9.38841 12.8325 9.17367 12.9964 9.00402 13.2021C8.83437 13.4078 8.71436 13.6498 8.65329 13.9094C8.59222 14.1689 8.59173 14.4391 8.65185 14.6988C8.71198 14.9586 8.83111 15.201 9.00001 15.4074C9.20311 15.6882 9.47936 15.908 9.79868 16.0427C10.118 16.1774 10.4682 16.222 10.8111 16.1716C11.5011 16.0879 11.9337 15.6537 12.1895 15.03C12.3663 14.5364 12.4431 14.0125 12.4153 13.4889C12.4058 10.9121 12.4058 8.33684 12.4011 5.76C12.4033 5.7335 12.407 5.70714 12.4121 5.68105H14.4726C14.7032 7.40526 15.5779 8.4979 17.4095 8.65263V10.6626Z"
+                                fill="white"></path>
+                        </svg></a>
+                </div>
+            </div>
+            <div class="col-md-3 col-xs-12 mb-4">
+                <h4>THỐNG KÊ TRUY CẬP</h4>
+                <table width="100%">
+					<tr>
+						<td>Đang online</td>
+						<td align="right">[[|online|]]</td>
+					</tr>
+					<tr>
+						<td>Truy cập trong ngày</td>
+						<td align="right">[[|day|]]</td>
+					</tr>
+					<tr>
+						<td>Truy cập trong tháng</td>
+						<td align="right">[[|month|]]</td>
+					</tr>
+					<tr>
+						<td>Truy cập trong năm</td>
+						<td align="right">[[|year|]]</td>
+					</tr><tr>
+						<td>Tổng truy cập</td>
+						<td align="right">[[|total|]]</td>
+					</tr>
+				</table>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--IF:home(Url::get('page')=='')-->
+<script src="templates/web/home2/js/index.js"></script>
+<!--/IF:home-->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".mySwiper", {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		freeMode: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+
+		},
+		breakpoints: {
+			"@0.00": {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			"@0.60": {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			"@1.00": {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			"@1.50": {
+				slidesPerView: 4,
+				spaceBetween: 50,
+			},
+		},
+	});
+</script>
+<script src="lib/js/bootstrap.min.js"></script>
+
+</body>
+</html>
